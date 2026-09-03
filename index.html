@@ -8,5 +8,148 @@
 <h1>RoyalSMP+</h1>
 <p>Welcome to the RoyalSMP+ website!</p>
 
+<h2>Přehled módů</h2>
+<h1>Seznam a rozdělení módů na server</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Mód / Soubor</th>
+        <th>Typ a účel</th>
+        <th>Kde běží?</th>
+        <th>Musí mít hráč v TLauncheru?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- POVINNÉ HERNÍ MÓDY A KNIHOVNY -->
+      <tr>
+        <th colspan="4" align="left">Povinné herní módy a doplňky</th>
+      </tr>
+      <tr>
+        <td><strong>Biomes O' Plenty</strong><br><code>BiomesOPlenty-fabric-...jar</code></td>
+        <td>Přidává desítky nových biomů, stromů, rostlin a stavebních bloků.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong> (bez něj se nepřipojíte)</td>
+      </tr>
+      <tr>
+        <td><strong>Create Fly</strong><br><code>create-fly-...jar</code></td>
+        <td>Létající mechaniky a komponenty ze světa Create.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Waystones</strong><br><code>waystones-fabric-...jar</code></td>
+        <td>Teleportační kameny a svitky pro rychlé cestování po světě.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Shogi</strong><br><code>shogi-fabric-...jar</code></td>
+        <td>Hratelné japonské šachy (bloky šachovnic, figurky).</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Better Boat Movement</strong><br><code>better-boat-movement-...jar</code></td>
+        <td>Lepší fyzika lodiček, plynulejší ovládání a vyjíždění překážek.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Trade Cycling</strong><br><code>trade-cycling-fabric-...jar</code></td>
+        <td>Tlačítko u vesničanů pro pohodlné protočení nabízených obchodů.</td>
+        <td>Both-side / Server</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+
+      <!-- POVINNÉ SYSTÉMOVÉ KNIHOVNY -->
+      <tr>
+        <th colspan="4" align="left">Povinné systémové knihovny (Dependencies)</th>
+      </tr>
+      <tr>
+        <td><strong>Fabric API</strong><br><code>fabric-api-...jar</code></td>
+        <td>Základní jádro nutné pro běh většiny Fabric módů.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TerraBlender</strong><br><code>TerraBlender-fabric-...jar</code></td>
+        <td>Knihovna řídící generování vlastních biomů (vyžadováno BOP).</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>GlitchCore</strong><br><code>GlitchCore-fabric-...jar</code></td>
+        <td>Základní podpůrná knihovna pro Biomes O' Plenty.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Balm</strong><br><code>balm-fabric-...jar</code></td>
+        <td>Podpůrná knihovna nutná pro fungování Waystones.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Fabric Language Kotlin</strong><br><code>fabric-language-kotlin-...jar</code></td>
+        <td>Umožňuje hře číst kód psaný v jazyce Kotlin.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>YetAnotherConfigLib (YACL)</strong><br><code>yet_another_config_lib_v3-...jar</code></td>
+        <td>Knihovna pro vykreslování konfiguračních oken a menu módů.</td>
+        <td>Both-side / Klient</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+
+      <!-- DOPORUČENÉ INFORMATIVNÍ MÓDY -->
+      <tr>
+        <th colspan="4" align="left">Doporučené doplňky rozhraní (UI)</th>
+      </tr>
+      <tr>
+        <td><strong>Just Enough Items (JEI)</strong><br><code>jei-...jar</code></td>
+        <td>Seznam všech bloků, předmětů a jejich receptů přímo v inventáři.</td>
+        <td>Both-side / Klient</td>
+        <td>NE (velmi doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>Jade</strong><br><code>Jade-...jar</code></td>
+        <td>Ukazuje nahoře na obrazovce název a stav bloku, na který koukáte.</td>
+        <td>Both-side / Klient</td>
+        <td>NE (velmi doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>AppleSkin</strong><br><code>appleskin-fabric-...jar</code></td>
+        <td>Ukazuje, kolik jídla a nasycení (saturation) vám dané jídlo doplní.</td>
+        <td>Client-side</td>
+        <td>NE (velmi doporučeno)</td>
+      </tr>
+
+      <!-- VOLITELNÁ OPTIMALIZACE -->
+      <tr>
+        <th colspan="4" align="left">Volitelné optimalizační módy (Pro vyšší FPS)</th>
+      </tr>
+      <tr>
+        <td><strong>Sodium</strong><br><code>sodium-fabric-...jar</code></td>
+        <td>Moderní náhrada za OptiFine, masivně zvyšuje FPS a plynulost.</td>
+        <td>Client-only (pouze hráč)</td>
+        <td>NE (doporučeno pro slabší PC)</td>
+      </tr>
+      <tr>
+        <td><strong>Entity Culling</strong><br><code>entityculling-fabric-...jar</code></td>
+        <td>Nevykresluje moby a truhly skryté za zdí, šetří výkon grafiky.</td>
+        <td>Client-only (pouze hráč)</td>
+        <td>NE (volitelné)</td>
+      </tr>
+      <tr>
+        <td><strong>ImmediatelyFast</strong><br><code>ImmediatelyFast-Fabric-...jar</code></td>
+        <td>Optimalizuje vykreslování písma, textů, HUD a inventářů.</td>
+        <td>Client-only (pouze hráč)</td>
+        <td>NE (volitelné)</td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
