@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RoyalSMP+</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">RoyalSMP+</h1>
+<p style="text-align: center;">Vítejte na oficiálním webu Minecraft serveru RoyalSMP+</p>
+
+<h2 style="text-align: center;">Navigace</h2>
+<div style="text-align: center;">
+    <a href="index.html">Domů</a> | <a href="modlist.html">Seznam módů</a> | <a href="playerlist.html">Seznam hráčů</a> | <a href="rulelist.html">Pravidla serveru</a>
+</div>
+
+<br>
+
+<h3 style="text-align: center;">Seznam a rozdělení módů na server</h3>
+
+  <table border="1" style="margin: 0px auto;">
+    <thead>
+      <tr>
+        <th>Mód / Soubor</th>
+        <th>Typ a účel</th>
+        <th>Kde běží?</th>
+        <th>Musí mít hráč nainstalované?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- POVINNÉ HERNÍ MÓDY A KNIHOVNY -->
+      <tr>
+        <th colspan="4" align="left">Povinné herní módy a doplňky (5)</th>
+      </tr>
+      <tr>
+        <td><strong>Biomes O' Plenty</strong><br><code>BiomesOPlenty-fabric-26.2-26.1.2.0.40.jar</code></td>
+        <td>Přidává desítky nových biomů, stromů, rostlin a stavebních bloků.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong> (bez něj se nepřipojíte)</td>
+      </tr>
+      <tr>
+        <td><strong>Create (Fabric Port)</strong><br><code>create-fly-26.2-rc-2-6.0.9-1.jar</code></td>
+        <td>Plnohodnotný Fabric port Create módu – ozubená kola, kinetické stroje a technická automatizace.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong> (bez něj se nepřipojíte)</td>
+      </tr>
+      <tr>
+        <td><strong>Waystones</strong><br><code>waystones-fabric-26.2-26.2.0.11.jar</code></td>
+        <td>Teleportační kameny a svitky pro rychlé cestování po světě.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Better Boat Movement</strong><br><code>better-boat-movement-3.0.0-26.1+fabric.jar</code></td>
+        <td>Lepší fyzika lodiček, plynulejší ovládání a vyjíždění překážek.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Trade Cycling</strong><br><code>trade-cycling-fabric-1.0.21+26.2.jar</code></td>
+        <td>Tlačítko u vesničanů pro pohodlné protočení nabízených obchodů.</td>
+        <td>Both-side / Server</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+
+      <!-- POVINNÉ SYSTÉMOVÉ KNIHOVNY -->
+      <tr>
+        <th colspan="4" align="left">Povinné systémové knihovny (Dependencies) (9)</th>
+      </tr>
+      <tr>
+        <td><strong>Fabric API</strong><br><code>fabric-api-0.159.0+26.2.jar</code></td>
+        <td>Základní jádro nutné pro běh většiny Fabric módů.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Architectury API</strong><br><code>architectury-fabric-21.0.7.jar</code></td>
+        <td>Univerzální knihovna rozhraní vyžadovaná řadou módů (např. mapy).</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TerraBlender</strong><br><code>TerraBlender-fabric-26.2-26.2.0.0.2.jar</code></td>
+        <td>Knihovna řídící generování vlastních biomů (vyžadováno BOP).</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>GlitchCore</strong><br><code>GlitchCore-fabric-26.2-26.2.0.0.0.jar</code></td>
+        <td>Základní podpůrná knihovna pro Biomes O' Plenty.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Balm</strong><br><code>balm-fabric-26.2-26.2.0.7.jar</code></td>
+        <td>Podpůrná knihovna nutná pro fungování Waystones.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Shogi</strong><br><code>shogi-fabric-26.2-26.2.0.5.jar</code></td>
+        <td>Systémová knihovna zajišťující interní funkce a síťovou komunikaci pro Waystones.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Fabric Language Kotlin</strong><br><code>fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar</code></td>
+        <td>Umožňuje hře číst kód psaný v programovacím jazyce Kotlin.</td>
+        <td>Both-side (Server i Klient)</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>YetAnotherConfigLib (YACL)</strong><br><code>yet_another_config_lib_v3-3.9.5+26.2-fabric.jar</code></td>
+        <td>Knihovna pro vykreslování konfiguračních oken a grafických menu módů.</td>
+        <td>Both-side / Klient</td>
+        <td><strong>ANO</strong></td>
+      </tr>
+      <tr>
+        <td><strong>MaLiLib</strong><br><code>malilib-fabric-26.2-0.29.3.jar</code></td>
+        <td>Podpůrná knihovna nutná pro běh schématického módu Litematica.</td>
+        <td>Client-side (příp. obě)</td>
+        <td>Pouze pokud má Litematicu</td>
+      </tr>
+
+      <!-- DOPORUČENÉ DOPLŇKY ROZHRANÍ A POHODLÍ (UI / QoL) -->
+      <tr>
+        <th colspan="4" align="left">Doporučené doplňky rozhraní a pohodlí (UI / QoL) (7)</th>
+      </tr>
+      <tr>
+        <td><strong>Xaero's Minimap</strong><br><code>xaerominimap-fabric-26.2-26.4.2.jar</code></td>
+        <td>Přehledná kruhová/čtvercová minimapa s vyznačením bodů a terénu.</td>
+        <td>Client-side</td>
+        <td>NE (doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>Xaero's World Map</strong><br><code>xaeroworldmap-fabric-26.2-1.45.0.jar</code></td>
+        <td>Celoobrazovková mapa celého prozkoumaného světa.</td>
+        <td>Client-side</td>
+        <td>NE (doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>Shulker Box Tooltip</strong><br><code>shulkerboxtooltip-fabric-5.4.0+26.2.jar</code></td>
+        <td>Zobrazuje náhled obsahu Shulker beden po najetí myší v inventáři.</td>
+        <td>Both-side / Klient</td>
+        <td>NE (velmi pohodlné)</td>
+      </tr>
+      <tr>
+        <td><strong>Just Enough Items (JEI)</strong><br><code>jei-26.2-fabric-30.28.0.193.jar</code></td>
+        <td>Katalog receptů a použití předmětů a bloků přímo v inventáři.</td>
+        <td>Both-side / Klient</td>
+        <td>NE (doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>Jade</strong><br><code>Jade-mc26.2-Fabric-26.2.11.jar</code></td>
+        <td>Informační okno v horní části obrazovky (zdraví mobů, růst plodin, obsah beden).</td>
+        <td>Both-side / Klient</td>
+        <td>NE (doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>AppleSkin</strong><br><code>appleskin-fabric-mc26.2-3.0.10.jar</code></td>
+        <td>Zobrazuje hodnoty nasycení (saturation) a kolik hladu jídlo doplní.</td>
+        <td>Client-side</td>
+        <td>NE (doporučeno)</td>
+      </tr>
+      <tr>
+        <td><strong>Lighty</strong><br><code>lighty-fabric-4.0.1+26.2.jar</code></td>
+        <td>Graficky ukazuje úroveň světla na blocích pro zabránění spawnování monster.</td>
+        <td>Client-side</td>
+        <td>NE (volitelné)</td>
+      </tr>
+
+      <!-- STAVITELSKÉ A UTILITNÍ NÁSTROJE -->
+      <tr>
+        <th colspan="4" align="left">Stavitelské a klientské nástroje (1)</th>
+      </tr>
+      <tr>
+        <td><strong>Litematica</strong><br><code>litematica-fabric-26.2-0.28.3.jar</code></td>
+        <td>Nástroj na promítání 3D hologramů staveb podle schémat přímo do světa.</td>
+        <td>Client-side</td>
+        <td>NE (pro stavitele)</td>
+      </tr>
+
+      <!-- VÝKON A OPTIMALIZACE -->
+      <tr>
+        <th colspan="4" align="left">Výkonnostní a optimalizační módy (4)</th>
+      </tr>
+      <tr>
+        <td><strong>Sodium</strong><br><code>sodium-fabric-0.9.1+mc26.2.jar</code></td>
+        <td>Moderní renderovací engine, radikálně zvyšuje FPS.</td>
+        <td>Client-only</td>
+        <td>NE (doporučeno pro plynulost)</td>
+      </tr>
+      <tr>
+        <td><strong>ModernFix</strong><br><code>modernfix-5.27.19-build.1.jar</code></td>
+        <td>Opravuje memory leaky, zrychluje načítání a snižuje spotřebu RAM.</td>
+        <td>Both-side / Klient</td>
+        <td>NE (doporučeno pro server i PC)</td>
+      </tr>
+      <tr>
+        <td><strong>Entity Culling</strong><br><code>entityculling-fabric-1.10.5-mc26.2.jar</code></td>
+        <td>Nevykresluje entity za zdí nebo mimo dohled, šetří výkon grafiky.</td>
+        <td>Client-only</td>
+        <td>NE (volitelné)</td>
+      </tr>
+      <tr>
+        <td><strong>ImmediatelyFast</strong><br><code>ImmediatelyFast-Fabric-1.16.4+26.2.jar</code></td>
+        <td>Zrychluje renderování písma, textů, HUD rozhraní a inventářů.</td>
+        <td>Client-only</td>
+        <td>NE (volitelné)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
