@@ -25,6 +25,77 @@ body {
     text-decoration: underline;
 }
 
+/* ====================== SEKCE NOVINEK NA HLAVNÍ STRÁNCE ====================== */
+.news-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.news-card {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tag-announcement { background-color: #e0f2fe; color: #0284c7; }
+.tag-mods { background-color: #fef3c7; color: #d97706; }
+.tag-vote { background-color: #dcfce7; color: #16a34a; }
+
+.news-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #111;
+}
+
+.news-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.news-link {
+    align-self: flex-start;
+    font-size: 14px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
 /* ====================== PRAVIDLA ====================== */
 .rule-list {
     max-width: 900px;
