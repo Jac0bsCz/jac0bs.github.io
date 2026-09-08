@@ -8,19 +8,12 @@ const allPlayers = [
     "Shoebill_"
   ];
 
+const REFRESH_INTERVAL = 120; // 2 minuty v sekundách
+let countdown = REFRESH_INTERVAL;
+
 async function updateServerStatus() {
   const notice = document.getElementById("server-notice");
-  const btn = document.getElementById("refresh-btn");
   const listContainer = document.getElementById("player-list");
-
-  if (btn) {
-    btn.disabled = true;
-    btn.textContent = "Načítám...";
-  }
-  if (notice) {
-    notice.textContent = "Zjišťuji stav...";
-    notice.style.color = "#777";
-  }
 
   try {
     const res = await fetch(`https://api.mcstatus.io/v2/status/java/${serverIP}?t=${Date.now()}`);
@@ -42,7 +35,7 @@ async function updateServerStatus() {
       onlineList = data.players.list.map(p => p.name_clean.toLowerCase());
     }
 
-    // Pokud existuje kontejner pro seznam hráčů (pouze na playerlist.html)
+    // Vykreslení hráčů (pokud existuje kontejner na playerlist.html)
     if (listContainer) {
       listContainer.innerHTML = "";
 
@@ -70,20 +63,37 @@ async function updateServerStatus() {
     }
 
   } catch (err) {
-    console.error(err);
+    console.error("Chyba při načítání stavu:", err);
     if (notice) {
       notice.textContent = "Nepodařilo se načíst stav serveru";
       notice.style.color = "#dc2626";
     }
-  } finally {
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = "🔄 Obnovit";
-    }
   }
 }
 
-// Spuštění kontroly po načtení dokumentu
+// Běh odpočtu každou sekundu
+function startTimer() {
+  const timerElem = document.getElementById("status-timer");
+
+  setInterval(() => {
+    countdown--;
+
+    if (countdown <= 0) {
+      countdown = REFRESH_INTERVAL;
+      updateServerStatus();
+    }
+
+    if (timerElem) {
+      const minutes = Math.floor(countdown / 60);
+      const seconds = countdown % 60;
+      const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+      timerElem.textContent = `(obnova za ${minutes}:${formattedSeconds})`;
+    }
+  }, 1000);
+}
+
+// Start při načtení stránky
 document.addEventListener("DOMContentLoaded", () => {
   updateServerStatus();
+  startTimer();
 });
