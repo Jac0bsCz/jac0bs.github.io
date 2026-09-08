@@ -1,0 +1,62 @@
+/* ZÁKLADNÍ VZHLED A JEDNOTNÁ VELIKOST PÍSMA */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;            /* Zvětšené základní písmo pro celý web */
+    line-height: 1.6;           /* Příjemnější rozestupy řádků */
+    margin: 20px;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* NAVIGACE */
+.nav-bar {
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* PRAVIDLA */
+.rule-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.rule-list li {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+/* TABULKA MÓDŮ (přeneseno z hlavičky modlistu) */
+table {
+    border-collapse: collapse;
+    font-size: 16px;            /* 16px je pro husté tabulky ideální, text v buňkách nebude přetékat */
+}
+
+th, td {
+    padding: 8px 12px;
+}
+
+.mod-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mod-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
