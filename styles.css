@@ -60,3 +60,30 @@ th, td {
     border-radius: 4px;
     flex-shrink: 0;
 }
+
+/* TABULKA PRO NÁVRHY KE SCHVÁLENÍ */
+.pending-table {
+    border-color: #bbbbbb;
+    color: #666666;             /* Šedý text */
+    background-color: #fafafa;  /* Velmi světlé šedé pozadí */
+}
+
+.pending-table th {
+    background-color: #eaeaea;
+    color: #555555;
+}
+
+.pending-table .mod-icon {
+    opacity: 0.55;              /* Snížená průhlednost ikonek */
+    filter: grayscale(40%);     /* Lehký černobílý filtr pro zvýraznění neaktivního stavu */
+}
+
+/* IKONKA VAROVÁNÍ / CHYBY S POPISEM */
+.mod-warning {
+    cursor: help;
+    font-size: 16px;
+    margin-left: 6px;
+    user-select: none;
+    display: inline-block;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+}
