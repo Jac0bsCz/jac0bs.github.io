@@ -78,14 +78,47 @@ th, td {
     filter: grayscale(40%);     /* Lehký černobílý filtr pro zvýraznění neaktivního stavu */
 }
 
-/* IKONKA VAROVÁNÍ / CHYBY S POPISEM */
+/* --- IKONKA VAROVÁNÍ / CHYBY S POPISEM --- */
+/* TOOLTIP PRO PC I MOBIL */
 .mod-warning {
-    cursor: help;
+    position: relative;
+    cursor: pointer;
     font-size: 16px;
     margin-left: 6px;
     user-select: none;
     display: inline-block;
-    filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+}
+
+/* Skrytá bublina ve výchozím stavu */
+.mod-warning::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: normal;
+    width: 240px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Zobrazení při hoveru (PC) i při kliknutí/focussu (mobil) */
+.mod-warning:hover::after,
+.mod-warning:focus::after,
+.mod-warning:active::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ====================== SEZNAM HRÁČŮ A STAVOVÉ INDIKÁTORY ====================== */
