@@ -10,6 +10,13 @@
 <h1 style="text-align: center;">RoyalSMP+</h1>
 <p style="text-align: center;"><b>Server IP:</b> RoyalSMP_Plus.aternos.me</p>
 
+<div style="text-align: center; margin-bottom: 20px;">
+  <span id="server-notice" style="font-weight: bold; font-size: 16px; color: #777;">Zjišťuji stav serveru...</span>
+  <button id="refresh-btn" onclick="updateServerStatus()" style="margin-left: 10px; padding: 4px 10px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #f3f4f6; font-size: 14px;">
+    🔄 Obnovit
+  </button>
+</div>
+
 <h2 style="text-align: center;">Navigace</h2>
 <div class="nav-bar">
     <a href="index.html">Domů</a> | <a href="modlist.html">Seznam módů</a> | <a href="playerlist.html">Seznam hráčů</a> | <a href="rulelist.html">Pravidla serveru</a>
@@ -53,5 +60,6 @@
     </li>
 </ol>
 
+<script src="server-status.js"></script>
 </body>
 </html>

@@ -10,6 +10,13 @@
 <h1 style="text-align: center;">RoyalSMP+</h1>
 <p style="text-align: center;"><b>Server IP:</b> RoyalSMP_Plus.aternos.me</p>
 
+<div style="text-align: center; margin-bottom: 20px;">
+  <span id="server-notice" style="font-weight: bold; font-size: 16px; color: #777;">Zjišťuji stav serveru...</span>
+  <button id="refresh-btn" onclick="updateServerStatus()" style="margin-left: 10px; padding: 4px 10px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: #f3f4f6; font-size: 14px;">
+    🔄 Obnovit
+  </button>
+</div>
+
 <h2 style="text-align: center;">Navigace</h2>
 <div class="nav-bar">
     <a href="index.html">Domů</a> | <a href="modlist.html">Seznam módů</a> | <a href="playerlist.html">Seznam hráčů</a> | <a href="rulelist.html">Pravidla serveru</a>
@@ -18,79 +25,11 @@
 <br>
 
 <h3 style="text-align: center;">Seznam členů serveru</h3>
-<p id="server-notice" style="text-align: center; font-size: 14px; color: #777;">Zjišťuji stav serveru...</p>
 
 <div class="player-container" id="player-list">
   <!-- Hráči se vygenerují automaticky přes JavaScript -->
 </div>
 
-<script>
-  // 1. ZDE NAPIŠ PŘEZDÍVKY VŠECH VAŠICH HRÁČŮ
-  const allPlayers = [
-    "Jac0bs_Cz",
-    "Kolacek20",
-    "litttel",
-    "Shoebill_"
-  ];
-
-  const serverIP = "RoyalSMP_Plus.aternos.me";
-
-  async function updatePlayerStatus() {
-    const listContainer = document.getElementById("player-list");
-    const notice = document.getElementById("server-notice");
-    listContainer.innerHTML = "";
-
-    try {
-      // Dotaz na bezplatné API zjišťující stav Aternosu
-      const res = await fetch(`https://api.mcstatus.io/v2/status/java/${serverIP}`);
-      const data = await res.json();
-
-      let onlineList = [];
-
-      if (data.online && data.players && data.players.list) {
-        // Získáme pole jmen aktuálně připojených hráčů
-        onlineList = data.players.list.map(p => p.name_clean.toLowerCase());
-        notice.textContent = `Server je Online (${data.players.online}/${data.players.max} hráčů)`;
-        notice.style.color = "#16a34a";
-      } else if (data.online) {
-        notice.textContent = "Server je Online (seznam hráčů je skrytý)";
-      } else {
-        notice.textContent = "Server je momentálně Offline";
-        notice.style.color = "#dc2626";
-      }
-
-      // Projdeme všechny zapsané hráče a vykreslíme je
-      allPlayers.forEach(player => {
-        const isOnline = onlineList.includes(player.toLowerCase());
-
-        const row = document.createElement("div");
-        row.className = "player-row";
-
-        row.innerHTML = `
-          <div class="player-info">
-            <img class="player-head" src="https://mc-heads.net/avatar/${player}/32" alt="${player}">
-            <strong>${player}</strong>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 14px; color: ${isOnline ? '#16a34a' : '#6b7280'}">
-              ${isOnline ? 'Online' : 'Offline'}
-            </span>
-            <span class="status-dot ${isOnline ? 'status-online' : 'status-offline'}"></span>
-          </div>
-        `;
-
-        listContainer.appendChild(row);
-      });
-
-    } catch (err) {
-      console.error(err);
-      notice.textContent = "Nepodařilo se načíst stav hráčů.";
-    }
-  }
-
-  // Spustit při načtení stránky
-  updatePlayerStatus();
-</script>
-
+<script src="server-status.js"></script>
 </body>
 </html>
