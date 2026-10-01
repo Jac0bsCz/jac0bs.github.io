@@ -6,7 +6,8 @@ const allPlayers = [
     "Kolacek20",
     "litttel",
     "Shoebill_",
-    "dynovy_kolacek20"
+    "dynovy_kolacek20",
+    "yara_yara_phonk"
   ];
 
 const REFRESH_INTERVAL = 120; // 2 minuty v sekundách
